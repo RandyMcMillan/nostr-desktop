@@ -129,7 +129,7 @@ impl State for RelaysState {
                     return Command::perform(
                         async move {
                             if let Err(e) = client.disconnect_relay(&url).await {
-                                log::error!("Impossible to disconnect {}: {}", url, e.to_string());
+                                log::error!("Impossible to disconnect {}: {}", url, e);
                             }
                         },
                         |_| RelaysMessage::UpdateRelays.into(),
