@@ -62,7 +62,7 @@ impl RelaysState {
                 self.relay_url.clear();
                 self.error = None;
             }
-            Err(e) => self.error = Some(e.to_string()),
+            Err(e) => self.error = Some(e),
         }
     }
 }
