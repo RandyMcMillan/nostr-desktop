@@ -25,6 +25,7 @@ jobs:
         run: just check-fmt
 
   check:
+    needs: fmt
     name: Check crate
     runs-on: ubuntu-latest
     steps:
